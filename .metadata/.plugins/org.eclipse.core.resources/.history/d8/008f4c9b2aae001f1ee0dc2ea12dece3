@@ -1,0 +1,5 @@
+package com.studyspringboot.bean;
+
+public interface Printer {
+
+}

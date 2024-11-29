@@ -1,0 +1,16 @@
+class Member {
+	String name;
+	String nickname;
+	public Member() {
+		
+		
+	}
+}
+public class UnderstandDI {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,21 @@
+import java.util.Date;
+
+class Member {
+	String name;
+	String nickname;
+	public Member() {
+		
+		
+	}
+}
+public class UnderstandDI {
+
+	public static void main(String[] args) {
+		Date date = new Date();
+		System.out.println(date);
+		
+
+	}
+
+}
+//실행 f11, ctrl + f11

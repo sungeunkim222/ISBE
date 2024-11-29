@@ -1,0 +1,27 @@
+package com.studyspringboot.bean;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration // 스프링 설정으로 사용됨을 의미
+public class Config {
+	public Member member1() {
+		Member member1 = new Member();
+		member1.setName("홍길동");
+		member1.setNickname("도사");
+		member1.setPrinter(new PrinterA());
+		
+		return member1;
+	}
+	
+	@Bean(name="hello") // 빈 : Spring이 IoC 방식으로 관리하는 객체
+	public Member member2() { // Consteructor Injection (생성자를 이용한 의존성 주입)
+		return new Member("전우치", "도사", new PrinterA());
+	}
+	
+
+}
+
+//빈 팩토리(BeanFactory) : 스프링의 IoC를 담당하는 핵심 컨테이너
+//어플리케이션 컨텍스트(ApplicationContext) : 빈 팩토리를 확장한 IoC컨테이너
+//71페이지
